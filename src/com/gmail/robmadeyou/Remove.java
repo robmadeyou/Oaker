@@ -14,7 +14,7 @@ public class Remove extends Task<ClientContext> {
 
 	@Override
 	public boolean activate() {
-		return ctx.objects.select().id(13345).poll().inViewport();
+		return ctx.objects.select().id(13345).poll().inViewport() && !ctx.widgets.widget(1188).valid();
 	}
 
 	@Override

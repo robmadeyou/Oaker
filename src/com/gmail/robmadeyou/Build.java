@@ -17,7 +17,7 @@ public class Build extends Task<ClientContext> {
 
 	@Override
 	public boolean activate() {
-		return ctx.objects.select().id(15327).poll().inViewport() && ctx.backpack.select().id(8778).count() >= 10;
+		return ctx.objects.select().id(15327).poll().inViewport() && ctx.backpack.select().id(8778).count() >= 10 && !ctx.widgets.widget(1306).valid();
 	}
 
 	@Override
