@@ -13,7 +13,7 @@ public class ButlerFetch extends Task<ClientContext>{
 
 	@Override
 	public boolean activate() {
-		return ctx.backpack.select().id(8778).isEmpty();
+		return ctx.backpack.select().id(8778).count() < 10 && !ctx.objects.select().id(13345).poll().inViewport();
 	}
 
 	@Override
